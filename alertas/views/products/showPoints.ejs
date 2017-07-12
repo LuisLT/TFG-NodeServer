@@ -1,0 +1,43 @@
+<h1> Puntos de localización  
+<img width="30px"  src="/images/maps.png" 
+                     alt="Alertas"> 
+
+<a href="/products/<%=addr_product%>/article"><button>Volver al producto</button></a></h1>
+
+
+
+<h2>
+<a href="/products/<%=addr_product%>/newPoint"><button type="button">Registrar nueva localización</button></a>
+<a href="javascript:location.reload()"><button type="button">Recargar</button></a>
+</h2>
+<table cellpadding="5px" border="2px" cellspacing="0" >
+
+<tr>
+<td></td>
+<td><b>Ciudad</td>
+<td><b>Longitud</td>
+<td><b>Latitud</td>
+<td><b>Fecha</td>
+</tr>
+
+
+<% for (var i in locations) { %>
+	<% var location = locations[i]; %>	
+	<% var date = dates[i]; %>	
+	
+
+	<tr>
+		<td>Localización <%=i%>:   </td>
+		<td><z><%=location[0]%>
+		  </z></td>
+		<td><a><%=location[1]%>
+		  </a></td>
+		<td><a><%=location[2]%>
+		  </a></td>
+		<td><z><%=date%></z></td>
+	</tr>
+<% } %>
+</table>
+
+
+

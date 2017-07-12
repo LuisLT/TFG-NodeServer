@@ -1,0 +1,28 @@
+<h1> Crear Producto </h1>
+
+<p>
+    <form method="post" action="/products" >      
+
+		<div>
+			Nombre:
+			<input type="text" name="name" value="<%= productN.name  %>" />
+		</div>
+		<div> 
+			Fábrica: 
+			<input type="text" name="company" value="<%= productN.company %>" />
+		</div>
+		<div>
+			Key:    
+			<input type="text" name="key" value="<%= productN.key %>" />
+		</div>
+
+		<div>
+			<input type="submit" value="Guardar">
+		</div>
+
+		<div>
+			<a href="/products"><button type="button">Cancelar</button></a>
+		</div>
+
+    </form>
+</p>

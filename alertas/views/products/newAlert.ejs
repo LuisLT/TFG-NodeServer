@@ -1,0 +1,23 @@
+<h1> Indique la razón de su alerta </h1>
+
+
+<p>
+    <form method="post" action="/products/<%=addr_product%>/article" >      
+
+		<div>
+			Causa:
+			<input type="text" name="reason" value="<%= alertN.reason %>" />
+		</div>
+
+
+		<div>
+			<input type="submit" value="Guardar">
+		</div>
+
+		<div>
+			<a href="/products/<%=addr_product%>/article"><button type="button">Cancelar</button></a>
+		</div>
+
+    </form>
+</p>
+

@@ -1,0 +1,44 @@
+<h1> <%=name%> 	<a href="/products"><button>Volver a la lista de productos</button></a>
+
+</h1>
+<h2>
+<img width="24px"  src="<%= active == false ? '/images/off.png' : '/images/on.png' %>" 
+                     alt="Activo">
+<img width="24px"  src="<%= nAlerts > 0 ? '/images/warning.png' : '/images/correcto.png' %>" 
+                     alt="alarma">
+<a href="/products/<%=addr_product%>/showPoints"><button type="button">Mostrar Punto de Localización</button></a>
+
+<a href="/products/<%=addr_product%>/article?_method=DELETE"
+             onClick="return confirm('¿Dar de baja <%= name %>?');">
+             <button>Dar de baja</button></a>
+</h2>
+
+<table cellpadding="4px"  cellspacing="0">
+	<tr><a href="javascript:location.reload()"><button type="button">Recargar</button></a></tr>
+
+	<tr>
+		<td><b>Fábrica: </b></td><td><%=company%> </td>
+	</tr>
+	<tr>
+		<td><b>Key:</b> </td><td><%=key%> </td>
+	</tr>
+	<tr>
+		<td><b>Dirección ethereum:</b></td> <td><%=addr_product%> <br></td>
+	</tr>
+	<tr>
+		<td><b>Código QR: </b></td><td><svg height ="40" width="40"> <path d="<%=qr%>"/> </svg></td>
+	</tr>
+	<tr><br>
+		<td><b><div style="color:red">Alertas: </b></td> 
+		<td><a href="/products/<%=addr_product%>/newAlert"><button type="button">Introduccir nueva Alerta</button></a></td>
+	</tr>
+	<tr><% for (var i in alerts) { %><% var alert = alerts[i]; %><td>   </td>
+		<td>
+			<table cellpadding="4px" cellspacing="0" >
+				<tr><div style="color:#FF0000;"><%=alert%> </div></tr>
+
+			</table>
+		</td>
+	</tr>
+	<% } %>
+</table>

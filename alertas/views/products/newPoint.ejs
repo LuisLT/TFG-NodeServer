@@ -1,0 +1,29 @@
+<h1> Crear Punto de Localización </h1>
+
+<p>
+    <form method="post" action="/products/<%=addr_product%>/showPoints" >  
+
+		<div>
+			Ciudad:
+			<input type="text" name="city" value="<%=pointN.city%>" />
+		</div>
+		<div>
+			Longitud:
+			<input type="text" name="longitude" value="<%=pointN.longitude%>" />
+		</div>
+		<div>
+			Latitud:
+			<input type="text" name="latitude" value="<%=pointN.latitude%>" />
+		</div>
+
+		<div>
+			<input type="submit" value="Guardar">
+		</div>
+
+		<div>
+			<a href="/products/<%=addr_product%>/showPoints"><button type="button">Cancelar</button></a>
+		</div>
+
+    </form>
+
+</p>

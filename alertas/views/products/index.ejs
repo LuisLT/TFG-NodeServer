@@ -1,0 +1,51 @@
+ 
+
+<h1>
+	Lista de productos almacenados:		
+</h1>
+<h2>
+<a href="/products/new"><button type="button">Crear Producto</button></a>
+<a href="javascript:location.reload()"><button type="button">Recargar</button></a>
+
+</h2>
+
+<table cellpadding="4px"  cellspacing="0">
+	<tr><td></td>
+		<td align="center"><b>Nombre</b></td>
+		<td align="center"><b>Dirección Ethereum</b></td>
+		<td align="center"><b>Info</b></td>
+		<td></td>
+	</tr>
+
+	<% for (var i in contracts) { %>
+	<% var contract = contracts[i]; %>	
+	<% var name = names[i]; %>
+	<% var alert = nAlerts[i]%>
+	<% var active = actives[i]%>
+	<tr>
+	<td><img width="24px"  src="<%= active == false ? '/images/off.png' : '/images/on.png' %>" 
+                     alt="Activo"></td>
+		<td> <%=name%> </td>
+
+		<td>
+			<z> <%=contract%> </z>
+		</td>
+
+		<td>
+			<a href="/products/<%=contract%>/article"><button type="button">Mostrar Producto</button></a>
+		</td>
+		
+		<td>
+			<a href="/products/<%=contract%>?_method=DELETE"
+             onClick="return confirm('Borrar: <%= name %>');">
+             <button>borrar</button></a>
+        </td>
+        <td><img width="24px"  src="<%= alert > 0 ? '/images/warning.png' : '/images/correcto.png' %>" 
+                     alt="alarma">
+        </td>
+	<% } %>
+	
+	
+
+</table>
+

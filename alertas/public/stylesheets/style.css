@@ -1,0 +1,42 @@
+body {
+
+  background-color: #A6D5EC;
+  padding: 10px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #2222FF;
+}
+z {
+  color: #0000FF;
+}
+nav {
+   font: 16px "Tahoma", Geneva, sans-serif;
+   position: fixed;
+   text-align: right;
+   right:30px;
+   top:20px;
+}
+section {
+  border: 2px solid #ffffff;
+  padding: 7px;
+  margin: 20px;
+  background-color: #F5F5F5;
+}
+
+footer {
+    text-align: right;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+footer1 {
+    text-align: left;
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+}
+
+
